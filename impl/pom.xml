@@ -16,23 +16,27 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
+		<!-- testing library for java code generator -->
 		<dependency>
 			<groupId>com.google.testing.compile</groupId>
 			<artifactId>compile-testing</artifactId>
 			<version>0.6</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- java code generator DSL -->
 		<dependency>
 			<groupId>com.squareup</groupId>
 			<artifactId>javapoet</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		<!-- Utilities for writing annotation processors. -->
 		<dependency>
 			<groupId>com.google.auto</groupId>
 			<artifactId>auto-common</artifactId>
-			<version>1.0-SNAPSHOT</version> <!-- or use a known release version -->
+			<version>0.3</version>
 		</dependency>
 
+		<!-- general purpose testing library -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -48,6 +52,7 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<!-- disable annotation processing -->
 					<compilerArgument>-proc:none</compilerArgument>
 				</configuration>
 			</plugin>

@@ -12,6 +12,9 @@ public class ProcessorTest {
 
 	@Test
 	public void testProcess() throws Exception {
+		// Compiler option coming soon.
+		// https://github.com/google/compile-testing/pull/64
+
 		assert_().about(javaSource())
 			.that(JavaFileObjects.forResource(Resources.getResource("HelloWorld.java")))
 			.processedWith(new MyProcessor())
