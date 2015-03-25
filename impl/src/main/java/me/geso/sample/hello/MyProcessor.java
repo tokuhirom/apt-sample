@@ -6,7 +6,6 @@ import java.util.Set;
 
 import javax.annotation.Generated;
 import javax.annotation.processing.AbstractProcessor;
-import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.annotation.processing.SupportedAnnotationTypes;
 import javax.annotation.processing.SupportedSourceVersion;
@@ -19,7 +18,6 @@ import javax.tools.Diagnostic.Kind;
 import javax.tools.JavaFileObject;
 
 import com.google.auto.common.MoreElements;
-import com.google.auto.service.AutoService;
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.CodeBlock;
 import com.squareup.javapoet.JavaFile;
@@ -27,7 +25,6 @@ import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 
-@AutoService(Processor.class)
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 @SupportedAnnotationTypes("me.geso.sample.hello.*")
 public class MyProcessor extends AbstractProcessor {
